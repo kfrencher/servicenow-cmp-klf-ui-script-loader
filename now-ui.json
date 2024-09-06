@@ -1,0 +1,37 @@
+{
+  "components": {
+    "x-53417-klf-ui-script-loader": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "KLF UI Script Loader",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "Component that will load UI Scripts from ServiceNow onto a page. Similar to a script tag. To check if the component is loading the scripts look in the console for messages that contain 'KLF UI Script Loader'",
+        "category": "primitives"
+      },
+      "properties": [
+        {
+          "name": "scripts",
+          "label": "Scripts",
+          "fieldType": "json",
+          "typeMetadata": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "readOnly": false,
+          "description": "List of UI Scripts to load. The name should include the scope name. For example: x_example_scope.MyUIScript",
+          "selectable": false,
+          "valueType": "string"
+        }
+      ]
+    }
+  },
+  "scopeName": "x_53417_klf_cmp1"
+}

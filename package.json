@@ -1,0 +1,33 @@
+{
+  "name": "@klf/klf-ui-script-loader",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Component that will load UI Scripts from ServiceNow onto a page. Similar to a script tag. To check if the component is loading the scripts look in the console for messages that contain 'KLF UI Script Loader'",
+  "keywords": [
+    "ServiceNow",
+    "Next Experience UI Component",
+    "@klf/klf-ui-script-loader"
+  ],
+  "readme": "./README.md",
+  "engines": {
+    "node": ">=14"
+  },
+  "module": "src/index.js",
+  "dependencies": {
+    "@servicenow/sass-kit": "latest",
+    "@servicenow/ui-core": "24.1.1",
+    "@servicenow/ui-renderer-snabbdom": "24.1.1"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.18.9",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "ajv": "^6.12.6",
+    "sass": "1.53.0",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "start": "snc ui-component develop --open",
+    "deploy": "snc ui-component deploy --force"
+  }
+}
