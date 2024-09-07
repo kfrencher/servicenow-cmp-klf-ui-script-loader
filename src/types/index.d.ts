@@ -19,6 +19,7 @@ interface Coeffects {
 
 declare module '@servicenow/ui-renderer-snabbdom' {
     const snabbdom: any; // Replace 'any' with the specific type if known
+    export const Fragment: any; // Replace 'any' with the specific type if known
     export default snabbdom;
 }
 

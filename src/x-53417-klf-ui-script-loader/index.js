@@ -1,6 +1,6 @@
 import { createCustomElement } from "@servicenow/ui-core";
 import snabbdom from "@servicenow/ui-renderer-snabbdom";
-import styles from "./styles.scss";
+import { Fragment } from "@servicenow/ui-renderer-snabbdom";
 
 /**
  * @param {ScriptLoaderState} state
@@ -31,11 +31,11 @@ const view = ({ properties }, { updateState }) => {
   console.log(`${logPrefix} finished parsing scripts array. Rendering script tags`, scripts);
 
   return (
-    <div style={{ display: "none" }}>
+    <Fragment>
       {scriptsArray.map((script) => (
         <script src={`/${script}.jsdbx`}></script>
       ))}
-    </div>
+    </Fragment>
   );
 };
 
@@ -50,5 +50,4 @@ createCustomElement("x-53417-klf-ui-script-loader", {
     },
   },
   view,
-  styles,
 });
